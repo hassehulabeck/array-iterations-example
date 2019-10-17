@@ -64,3 +64,25 @@ persons.forEach(person => {
 persons.forEach(function (person) {
     console.log(person.name);
 })
+
+// Lägg till egenskapen married
+persons.map(function (person) {
+    person.married = null;
+})
+
+// Gift alla personer med udda ålder.
+persons.map(person => {
+    if (person.age % 2 == 1) {
+        person.married = true;
+    }
+})
+
+// Räkna ihop totalålder
+var totalAge = persons.reduce(function (acc, person) {
+    return acc + person.age;
+}, 0)
+
+// Räkna ihop antalet hobbies
+var numOfHobbies = persons.reduce(function (acc, person) {
+    return acc + person.hobbies.length;
+}, 0)
