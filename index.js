@@ -49,7 +49,10 @@ var aPersons = persons.filter(function (person) {
 
 // Hitta den förste personen med hobbyn musik.
 var musicLover = persons.find(function (person) {
-    if ((person.hobbies.includes("musik") || person.hobbies.includes("music"))) {
+    // För att hitta två olika stavningar.
+    if (person.hobbies.includes("musik") ||
+        person.hobbies.includes("music")) {
         return true;
     }
+
 })
