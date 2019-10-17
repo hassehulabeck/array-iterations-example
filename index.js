@@ -30,7 +30,7 @@ var persons = [{
     {
         name: "Flo",
         age: 49,
-        hobbies: ["Norwegian literature"]
+        hobbies: ["Norwegian literature", "Fruits"]
     }
 ]
 
@@ -86,3 +86,19 @@ var totalAge = persons.reduce(function (acc, person) {
 var numOfHobbies = persons.reduce(function (acc, person) {
     return acc + person.hobbies.length;
 }, 0)
+
+// Kolla om det finns någon gift som gillar sport.
+var marriedSport = persons.find(function (person) {
+    if (person.married && person.hobbies.includes("sports"))
+        return true;
+})
+
+// Lista alla hobbies som börjar på "f".
+var fHobbies = persons.filter(function (person) {
+    var x = person.hobbies.filter(function (hobby) {
+        if (hobby.indexOf("F") == 0)
+            return true;
+    })
+    if (x.length > 0)
+        return true;
+})
