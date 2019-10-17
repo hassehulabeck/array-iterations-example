@@ -54,3 +54,13 @@ var musicLover = persons.find(function (p) {
         return true;
     }
 })
+
+// Skriv ut alla personer - arrow function
+persons.forEach(person => {
+    console.log(person);
+})
+
+// Skriv ut alla personers namn - vanlig funktion
+persons.forEach(function (person) {
+    console.log(person.name);
+})
