@@ -34,7 +34,12 @@ var persons = [{
     }
 ]
 
+var allOver40 = true;
 
+// Kolla om alla personer är äldre än 40 år.
+allOver40 = persons.every(function (person) {
+    return person.age > 40;
+})
 
 // Kopiera alla personer med ett "a" i namnet.
 var aPersons = persons.filter(function (person) {
@@ -42,4 +47,9 @@ var aPersons = persons.filter(function (person) {
     return person.name.indexOf("a") != -1;
 })
 
-var namesIncludingA = persons.filter(checkNames);
+// Hitta den förste personen med hobbyn musik.
+var musicLover = persons.find(function (person) {
+    if ((person.hobbies.includes("musik") || person.hobbies.includes("music"))) {
+        return true;
+    }
+})
