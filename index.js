@@ -33,17 +33,10 @@ var persons = [{
         hobbies: ["Norwegian literature"]
     }
 ]
-var allOver40 = true;
 
-// Kolla om alla personer är äldre än 40 år.
-allOver40 = persons.every(function (person) {
-    return person.age > 40;
-})
+// Kopiera alla personer med ett "a" i namnet.
 
-var x = persons.every(person => {
-    if (person.age > 10) {
-        console.log("True")
-    } else {
-        console.log("False")
-    }
+var aPersons = persons.filter(function (person) {
+    // .indexOf ger alltid resultatet -1 om den inte hittar något.
+    return person.name.indexOf("a") != -1;
 })
