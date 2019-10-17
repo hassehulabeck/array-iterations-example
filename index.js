@@ -48,11 +48,9 @@ var aPersons = persons.filter(function (person) {
 })
 
 // Hitta den förste personen med hobbyn musik.
-var musicLover = persons.find(function (person) {
+var musicLover = persons.find(function (p) {
     // För att hitta två olika stavningar.
-    if (person.hobbies.includes("musik") ||
-        person.hobbies.includes("music")) {
+    if (p.hobbies.includes("musik") || p.hobbies.includes("music")) {
         return true;
     }
-
 })
