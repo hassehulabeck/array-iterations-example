@@ -33,8 +33,17 @@ var persons = [{
         hobbies: ["Norwegian literature"]
     }
 ]
+var allOver40 = true;
 
 // Kolla om alla personer är äldre än 40 år.
-var allOver40 = persons.every(function (person) {
+allOver40 = persons.every(function (person) {
     return person.age > 40;
+})
+
+var x = persons.every(person => {
+    if (person.age > 10) {
+        console.log("True")
+    } else {
+        console.log("False")
+    }
 })
